@@ -57,7 +57,7 @@ function App() {
         <ul className="to-do-list" id="to-do-list">
           {tasks.map(element => {
             return (
-              <li className="task" id={element.id}>{element.name}<button className="btn btn--red" onClick={() => {
+              <li className="task" key={element.id}>{element.name}<button className="btn btn--red" onClick={() => {
                 removeTask(element.id, true)
               }}>Remove</button></li>
             )
